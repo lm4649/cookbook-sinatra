@@ -1,0 +1,13 @@
+<h1> Add a new recipe</h1>
+<form action="/recipes" method="post">
+  <label for="recipe-name"> Recipe name:</label><br>
+  <input type ="text" id="recipe-name" name ="recipe-name" value="<%= @name %>"><br>
+  <br><label for="recipe-description"> Recipe description:</label><br>
+  <textarea type ="text" id="recipe-description" name ="recipe-description" value="<%= @description %>" rows="4" cols="50"></textarea><br>
+  <br><label for="recipe-preptime"> Recipe preparation time:</label><br>
+  <input type ="text" id="recipe-preptime" name ="recipe-preptime" value="<%= @prep_time %>"><br>
+  <br><label for="recipe-difficulty"> Recipe difficulty:</label><br>
+  <input placeholder = "Easy or More effort" type ="text" id="recipe-difficulty" name ="recipe-difficulty" value="<%= @difficulty %>"><br>
+  <br>
+  <input type = "submit" value="Submit">
+</form>

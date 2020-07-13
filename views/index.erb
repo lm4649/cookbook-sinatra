@@ -1,0 +1,13 @@
+ <%= Time.now %>
+<h1> Welcome to your Cookbook!</h1>
+<form action ='/remove' method='POST'>
+<ul>
+  <% @recipes.each_with_index do |recipe, index| %>
+    <li>
+      <%= "#{recipe.name}: #{recipe.description} (#{recipe.prep_time})" %>
+       <button  type="submit" name = "index" value='<%= index %>' > Remove </button>
+    </li>
+  <% end %>
+</ul>
+</form>
+<a href="/new"> Create a new recipe </a>
